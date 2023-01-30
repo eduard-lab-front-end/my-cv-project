@@ -1,0 +1,236 @@
+// Mobile first 
+
+@media screen and (min-width:380px) {
+    
+    .about-container {
+        padding: 1.5em 1.5em;
+        
+        .title {
+            font-size: 2em;
+            font-weight: 700;
+            text-transform: capitalize;
+            position: relative;
+            margin-bottom: 1em;
+        }
+        .title::after {
+            content: '';
+            width: 1.5em;
+            height: 0.1em;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color: var(--skin-color);
+        }
+        .title::before {
+            content: '';
+            width: 0.8em;
+            height: 0.1em;
+            position: absolute;
+            left:0;
+            bottom: -6px;
+            background-color: var(--skin-color);
+        }
+        .about-name { 
+            font-size: 1em;
+            font-weight: 600;
+            margin-bottom: 1.3em;
+            span {
+                color: var(--skin-color);
+                font-weight: 700;
+            }
+        }
+        .about-descr {
+            font-size: 0.9em;
+            color:var(--text-black-900);
+            margin-bottom: 2em;
+        }
+        .infoAndSkillsWrapper {
+
+            .info {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-bottom: 2.2em;
+                .card {
+                    width: 43%;
+                    border-bottom: 1px solid var(--bg-black-50);
+    
+                    .card-header {
+                        font-size: 0.9em;
+                        color: var(--text-black-900);
+                        font-weight: 700;
+                    }
+                    .card-info {
+                        font-size: 0.8em;
+                        color: var(--text-black-700);
+                    }
+                }
+                .buttons {
+                    display: flex;
+                    gap: 1.5em;
+                    margin-top: 2em;
+                    margin-bottom: 2em;
+                    button {
+                        padding: 10px 25px;
+                        border-radius: 20px;
+                        border: none;
+                        background-color: var(--skin-color);
+                        color: var(--text-black-900);
+                    }
+                }
+            }
+            .skills {
+    
+                .skill-item {
+                    justify-content: space-between;
+                    margin-bottom: 2.5em;
+                    h5 {
+                        line-height: 40px;
+                        font-weight: 600;
+                        font-size: 1em;
+                        color:var(--text-black-900);
+                        text-transform: capitalize;
+                        width: 50%;
+                    }
+                    .progress {
+                        background-color: var(--bg-black-50);
+                        height: 7px;
+                        border-radius: 4px;
+                        width: 100%;
+                        position: relative;
+            
+                        .progress-scale { 
+                            position: absolute;
+                            left:0;
+                            top:0;
+                            height: 100%;
+                            border-radius: 4px;
+                            background-color: var(--skin-color);
+                        }
+                        .skill-percent { 
+                            position: absolute;
+                            right: 0;
+                            color: var(--text-black-900);
+                            top:-40px;
+                            line-height: 40px;
+                        }
+                    }
+                }  
+            }
+        }
+        
+        .education-wrapper {
+            .education-container {
+                margin-bottom: 2em;
+    
+                h2 {
+                    font-size: 1.3em;
+                    text-transform: capitalize;
+                    margin-bottom: 1.5em;
+                }
+                .education-section {
+                    background-color: var(--bg-black-100);
+                    padding: 25px 10px 10px 3em;
+                    border-radius: 0.8em;
+                    position: relative;
+    
+                    .education-info {
+                        position: relative;
+                        margin-bottom: 1.8em;
+                        .date {
+                            display: flex;
+                            align-items: center;
+                            gap:0.5em;
+                            color: var(--text-black-900);
+                            font-weight: 600;
+                            margin-bottom: 0.8em;
+                        }
+                        .degree {
+                            font-size: 1.1em;
+                            font-weight: 600;
+                            text-transform: capitalize;
+                            margin-bottom: 1em;
+                        }
+                        .degree-descr {
+                            font-size: 0.9em;
+                        }
+    
+                    }
+                    .education-info::after{
+                        content: '';
+                        position: absolute;
+                        left:-30px; 
+                        top: 4px;
+                        height: 15px;
+                        width: 15px;
+                        border-radius: 50%;
+                        background-color: var(--skin-color);
+                    }
+                }
+                .education-section::before{
+                    content: '';
+                    position: absolute;
+                    left: 24px;
+                    top: 32px;
+                    height: 91%;
+                    width: 2px;
+                    background-color: var(--skin-color);
+                }
+                
+            } 
+        }
+      
+    }
+}
+
+
+// Tablet
+
+@media screen and (min-width: 481px) {
+    .about-container {
+        
+     
+    }
+}
+
+
+// Desktop 
+
+@media screen and (min-width:769px) {
+    .about-container {
+        .about-descr {
+            margin-bottom: 3em;
+        }
+        .infoAndSkillsWrapper{
+            display: flex; 
+            .info {
+                display: flex;
+                width: 70%;
+                margin-bottom: 0;
+                .card {
+                    display: flex;
+                    gap: 0.5em;
+                    height: 2.5em;
+                    .card-info {
+                        font-size: 0.9em;
+                    }
+                }
+                .buttons {
+                    height: 3em;
+                   button {
+                    font-size: 0.9em;
+                   }
+                }
+            }
+            .skills {
+                width: 50%;
+            }
+        }
+        .education-wrapper {
+            display: flex;
+            gap: 15px;
+        }
+    }
+}
+
+

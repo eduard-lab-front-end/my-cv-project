@@ -1,0 +1,121 @@
+// Mobile first 
+
+@media screen and (min-width:380px) {
+    
+    .contact-container {
+        padding: 1.5em 1.5em;
+
+        .services-header {
+            font-size: 2em;
+            font-weight: 700;
+            text-transform: capitalize;
+            position: relative;
+            margin-bottom: 1em;
+        }
+        .services-header:after {
+            content: '';
+            width: 1.5em;
+            height: 0.1em;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color: var(--skin-color);
+        }
+        .services-header::before {
+            content: '';
+            width: 0.8em;
+            height: 0.1em;
+            position: absolute;
+            left:0;
+            bottom: -6px;
+            background-color: var(--skin-color);
+        }
+        .contact-wrapper {
+
+            .subHeader{
+                font-size: 1.3em;
+                font-weight: 700;
+                color:var(--skin-color);
+                text-align: center;
+                margin-bottom: 1em;
+            }
+            .descr {
+                font-size: 0.9em;
+                text-transform: uppercase;
+                font-weight: 700;
+                text-align: center;
+                margin-bottom: 4em;
+            }
+            .contact-cards {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 3em;
+                margin-bottom: 4em;
+                .contact-card {
+                    text-align: center;
+
+                    .contact-icon {
+                        font-size: 1.5em;
+                        color:var(--skin-color);
+                        margin-bottom: 0.1em;
+                        transition: ease-in-out 0.8s;
+                    }
+                    .contact-title { 
+                        font-weight: 600;
+                    }
+                    .contact-info {
+                        // font-size: 0.9em;
+                        color:var(--text-black-700);
+                    }
+                }
+                
+            }
+            .send-email {
+                
+                .form {
+
+                    input, textarea {
+                        width: 100%;
+                        margin-bottom: 2em;
+                        padding: 15px 25px;
+                        border-radius: 25px;
+                        border: none;
+                        background-color: var(--bg-black-100);
+                    }
+
+                    .form-submit {
+                        padding: 10px 40px;
+                        border: none;
+                        border-radius: 30px;
+                        background-color: var(--skin-color);
+                        color: #fff;
+                        font-size: 0.9em;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:481px) {
+    .contact-container {
+        .contact-wrapper {
+            .contact-cards {
+                flex-direction: row;
+                flex-wrap: wrap;
+                .contact-card {
+                    width: 45%;
+                    .contact-title {
+                        font-size: 1.1em;
+                    }
+                    .contact-info {
+                        font-size: 0.9em;
+                    }
+                }
+            }
+        }
+    }
+}

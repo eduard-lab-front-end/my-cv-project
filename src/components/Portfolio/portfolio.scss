@@ -1,0 +1,33 @@
+.portfolio-conteiner {
+    padding: 1.5em 1.5em;
+    .title {
+        font-size: 2em;
+        font-weight: 700;
+        text-transform: capitalize;
+        position: relative;
+        margin-bottom: 2em;
+    }
+    .title::after {
+        content: '';
+        width: 1.5em;
+        height: 0.1em;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: var(--skin-color);
+    }
+    .title::before {
+        content: '';
+        width: 0.8em;
+        height: 0.1em;
+        position: absolute;
+        left:0;
+        bottom: -6px;
+        background-color: var(--skin-color);
+    }
+    .portfolio-descr {
+        font-size: 1.2em;
+        font-weight: 600;
+        color:var(--text-black-900)
+    }
+}

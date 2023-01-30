@@ -1,0 +1,211 @@
+// Mobile first
+
+@media screen and (min-width: 380px) {
+
+    .home-container { 
+        height: 80vh;
+        padding: 0 1.2em;
+
+        .home-section {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .my-name {
+                font-size: 1.4em;
+                margin-bottom: 1.5em;
+                font-weight: 700;
+                letter-spacing: 0.1em;
+                span {
+                    font-family: 'Clicker Script', cursive;
+                    font-size: 110%;
+                    color: var(--skin-color);
+                }
+            }
+            .i-am { 
+                font-size: 1.2em;
+                font-weight: 700;
+                margin-bottom: 2em;
+                letter-spacing: 0.1em;
+                span {
+                    font-size: 1.2em;
+                    font-weight: 700;
+                    color: var(--skin-color);
+                }
+            }
+            .descr {
+                letter-spacing: 0.02em;
+                margin-bottom: 2em;
+            }
+            .more {
+                width: 50%;
+                padding: 0.4em;
+                border-radius: 0.7em;
+                border: none;
+                background-color: var(--skin-color);
+                color: var(--bg-black-900);
+                transition: all 0.3s ease;
+            }
+            .more:hover {
+                transform: scale(1.1);
+            }
+        }
+        .img-section {
+            display: none;
+        }
+    }
+       
+}
+
+// Tablet
+
+        .my-name {
+            font-size: 3em;
+            margin-bottom: 1.5em;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            span {
+                font-family: 'Clicker Script', cursive;
+                font-size: 1.4em;
+                color: var(--skin-color);
+            }
+        }
+        .i-am { 
+            font-size: 1.2em;
+            font-weight: 700;
+            margin-bottom: 2em;
+            letter-spacing: 0.1em;
+            span {
+                font-size: 1.2em;
+                font-weight: 700;
+                color: var(--skin-color);
+            }
+        }
+        .descr {
+            letter-spacing: 0.02em;
+            margin-bottom: 2em;
+        }
+        .more {
+            width: 50%;
+            padding: 0.4em;
+            border-radius: 0.7em;
+            border: none;
+            background-color: var(--skin-color);
+            color: var(--bg-black-900);
+            transition: all 0.3s ease;
+        }
+        .more:hover {
+            transform: scale(1.1);
+        }
+
+// Tablet 
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .home-container {
+        height: 90vh;
+       
+        .home-section {
+            display: flex;
+            flex-direction: column;
+        
+            // height: 90vh;
+            .my-name {
+                font-size: 1.8em;
+                margin-bottom: 2em;
+                span {
+                    font-size: 130%;
+                }
+            }
+            .i-am {
+                font-size: 1.8em;
+                span {
+                    font-size: 100%;
+                }
+            }
+            .descr {
+                font-size: 1.1em;
+                margin-bottom: 3.5em;
+            }
+            .more {
+                width: 40%;
+                padding: 0.6em;
+            }
+            .more {
+                width: 40%;
+            }
+        }
+        }
+}
+
+// Desktop
+
+@media screen and (min-width:769px){
+    .home-container {
+        display: flex;
+        gap:15px;
+        height: 90vh;
+        .home-section {
+            width: 58%;
+            .my-name {
+                font-size: 1.6em;
+                margin-bottom: 2em;
+                span {
+                    font-size: 120%;
+                }
+            }
+            .i-am {
+                font-size: 1.7em;
+                span {
+                    font-size: 100%;
+                }
+            }
+            .descr {
+                font-size: 1em;
+                margin-bottom: 3.5em;
+            }
+            .more {
+                width: 40%;
+                padding: 0.4em;
+            }
+            .more {
+                width: 40%;
+            }
+        }
+        .img-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 35%;
+            .img {
+                position: relative;
+                height: 50%;
+                width: 100%;
+                background: url('../../img/IMG.png') no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+            .img::before {
+                content: '';
+                position: absolute;
+                width: 80px;
+                height: 80px;
+                border-top: 10px solid var(--skin-color);
+                border-left: 10px solid var(--skin-color);
+                top: -50px;
+                left:-30px;
+            }
+            .img::after {
+                content: '';
+                position: absolute;
+                width: 80px;
+                height: 80px;
+                border-bottom: 10px solid var(--skin-color);
+                border-right: 10px solid var(--skin-color);
+                bottom: -50px;
+                right:-30px;
+            }
+        }
+    }
+}
+

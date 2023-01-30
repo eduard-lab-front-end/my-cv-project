@@ -1,0 +1,112 @@
+// Mobile first 
+
+@media screen and (min-width:380px) {
+    .services-container { 
+        padding: 1.5em 1.5em;
+        .services-header {
+            font-size: 2em;
+            font-weight: 700;
+            text-transform: capitalize;
+            position: relative;
+            margin-bottom: 1em;
+        }
+        .services-header:after {
+            content: '';
+            width: 1.5em;
+            height: 0.1em;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color: var(--skin-color);
+        }
+        .services-header::before {
+            content: '';
+            width: 0.8em;
+            height: 0.1em;
+            position: absolute;
+            left:0;
+            bottom: -6px;
+            background-color: var(--skin-color);
+        }
+        .services-cards {
+            
+            .services-card {
+                background-color: var(--bg-black-100);
+                border-radius: 1em;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                padding: 2.2em 1.8em;
+                text-align: center;
+                margin-bottom: 1.5em;
+                .serv-icon-wrapper {
+                    width: 4em;
+                    height: 4em;
+                    padding: 1em 0 0 0;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: ease-in-out 0.8s;
+                    margin-bottom: 1em;
+                    .serv-icon {
+                        font-size: 2.6em;
+                        color:var(--skin-color);
+                        margin-bottom: 0.5em;
+                        transition: ease-in-out 0.8s;
+                    }
+                }
+                .serv-icon-wrapper:hover {
+                    background-color: var(--skin-color);
+                    .serv-icon:hover {
+                       font-size: 2em;
+                       color:white;
+                    }
+                } 
+                .serv-name {
+                    font-size: 1.2em;
+                    font-weight: 700;
+                    color: var(--text-black-900);
+                    text-transform: capitalize;
+                    margin-bottom: 0.7em;
+                }
+                .serv-descr {
+                    font-size: 0.9em;
+                    color:var(--text-black-700);
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+// Tablet 
+@media screen and (min-width:481px) {
+    .services-container {
+        .services-cards {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            .services-card {
+              width: 48%;
+            }
+        }
+    }
+}
+
+// Desktop 
+
+@media screen and (min-width: 769px) {
+    .services-container {
+        .services-cards {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            .services-card {
+              width: 30%;
+            }
+        }
+    }
+}

@@ -1,0 +1,171 @@
+
+/* --------Navbar and burger menu ------- */
+
+// Mobile first
+
+@media screen and (min-width: 380px) {
+
+    nav { 
+
+        display: flex;
+        justify-content: flex-start;
+        padding: 1em;
+        position: relative;
+    
+    
+        .burger-menu {
+            height: 1.5em;
+            width: 1.5em;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            cursor: pointer;
+            z-index: 2;
+            
+            .burger-bar {
+                width: 2em;
+                height: 4px;
+                background: var(--skin-color);
+                border-radius: 0.5em;
+            }
+        }
+    }
+    
+    .menu {
+        width: 70%;
+        height: 100vh;
+        background-color: var(--bg-black-100);
+        position: absolute;
+        top:0;
+        left:-70%;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-right: 1px solid var(--bg-black-50);
+        transition: left 3000ms ease-in-out;
+        .logo {
+            position: absolute;
+            top:3.5em;
+            padding: 0.5em;
+            p,span{ 
+                font-size: 2em;
+            }
+            span {
+                font-family: 'Clicker Script', cursive;
+            }
+        }
+        .logo::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-bottom: 5px solid var(--skin-color);
+            border-left: 5px solid var(--skin-color);
+            bottom: 17px;
+            left:-5px;
+        }
+        .logo::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-top: 5px solid var(--skin-color);
+            border-right: 5px solid var(--skin-color);
+            top: 20px;
+            right:-7px;
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 1.3em;
+            li {
+                display: block;
+                color:var(--bg-black-900);
+                a {
+                    font-size: 16px;
+                    font-weight: 700;
+                    display: block;
+                    color:var(--text-black-900);
+                    padding: 5px 15px;
+                    border-bottom: 1px solid var(--bg-black-50);
+                }
+                .link-active { 
+                    color: var(--skin-color)
+                }
+            }
+            .icon {
+                font-size: 0.9em;
+                margin-right: 0.9em;
+            }
+        }
+    }
+    
+    /*  ------------- sliding menu ----------*/
+    
+    .hidden {
+        display: none;
+    }
+    
+    .visible {
+        display: inherit;
+        left:0;
+    }
+    
+    /* ---------- animations -------- */
+    
+    /* clicked */
+    
+    
+    .burger-bar.clicked:nth-child(1) {
+        transform: rotate(45deg) translate(0.4em, 0.55em);
+        transition: ease-in-out 0.5s;
+    }
+    .burger-bar.clicked:nth-child(2) {
+        transform: scale(0.1);
+        transition: ease-in-out 0.5s;
+    }
+    .burger-bar.clicked:nth-child(3) {
+        transform: rotate(135deg) translate(-0.3em, 0.5em);
+        transition: ease-in-out 0.5s;
+    }
+    
+    /* unclicked */
+    
+    .burger-bar.unclicked {
+        transform: rotate(0);
+        transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+    }
+}
+
+// Tablet
+
+@media screen and (min-width: 480px) {
+    .menu {
+        width: 45%;
+    }
+}
+
+// Desktop
+
+@media screen and (min-width:481px) and (max-width:1024px) {
+    nav { 
+    
+        .burger-menu {
+  
+            
+            .burger-bar {
+
+            }
+        }
+    }
+    .menu {
+        width: 30%;
+    
+    }
+}
+
+
+

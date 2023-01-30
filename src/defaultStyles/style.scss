@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 1.5;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+ul {
+    list-style: none;
+}
+
+:root {
+    --bg-black-900:#f2f2fc;
+    --bg-black-100:#fdf9ff;
+    --bg-black-50: #e8dfec;
+    --text-black-900: #302e4d;
+    --text-black-700: #504e70;
+    --skin-color: #ff6f04;
+}
